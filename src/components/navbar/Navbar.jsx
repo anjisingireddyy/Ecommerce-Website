@@ -140,13 +140,9 @@ function Navbar() {
                 <Link to={'/'} className='flex'>
                   <div className="flex ">
                   <h1
-  className="text-4xl font-extrabold text-center px-6 py-3 rounded-lg shadow-lg transition-all duration-200"
+  className="text-xl sm:text-2xl md:text-4xl font-extrabold text-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg transition-all duration-200"
   style={{
     fontFamily: "'Poppins', italic",
-    // background: mode === 'dark' 
-    //   ? 'linear-gradient(135deg, #ff8e3c, #ff3c78)' 
-    //   : 'linear-gradient(135deg, #ff6161, #ffa361)',
-    // color: mode === 'dark' ? 'violet' : '#3d3d3d',
     color: mode === 'dark' ? '#FF69B6' : '#8a2be2',
     textShadow: mode === 'dark' 
       ? '0 4px 8px rgba(255, 165, 0, 0.5)' 
@@ -155,8 +151,11 @@ function Navbar() {
     letterSpacing: '-2px',
   }}
 >
-  SV ReadyMades and General Stores
+  Sri Venkateswara ReadyMades and General Stores
 </h1>
+
+
+
 
                   </div>
                 </Link>
@@ -171,7 +170,7 @@ function Navbar() {
                  {user ?  <Link to={'/order'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                     Order
                   </Link> :   <Link to={'/signup'}  className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
-                      Signup
+                      Login
                     </Link>}
 
                   {user?.user?.email === 'sainavya2542005@gmail.com' ? 
