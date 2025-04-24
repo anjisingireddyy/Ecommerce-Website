@@ -1,37 +1,33 @@
-name: Deploy to GitHub Pages
+ name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Trigger the workflow when pushing to the 'main' branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Node.js (if using React, Vue, etc.)
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Adjust if you are using a different version
+          node-version: '16'
 
-      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Build the project
       - name: Build the project
         run: npm run build
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.1.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Deploy to the gh-pages branch
-          folder: build     # Make sure this is the build folder
+          branch: gh-pages         # Target branch for deployment
+          folder: build            # Output folder (for React, it's "build")
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
