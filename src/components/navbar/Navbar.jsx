@@ -73,7 +73,7 @@ function Navbar() {
                     </Link>
                   </div> : ""}
 
-                  {user?.user?.email === "sainavya2542005@gmail.com" ? <div className="flow-root">
+                  {user?.user?.email === "skeerthya2528@gmail.com" ? <div className="flow-root">
                     <Link to={'/dashboard'} className="-m-2 block p-2 font-medium text-gray-900" style={{ color: mode === 'dark' ? 'white' : '', }}>
                       admin
                     </Link>
@@ -173,7 +173,7 @@ function Navbar() {
                       Login
                     </Link>}
 
-                  {user?.user?.email === 'sainavya2542005@gmail.com' ? 
+                  {user?.user?.email === 'skeerthya2528@gmail.com' ? 
                    <Link to={'/dashboard'} className="text-sm font-medium text-gray-700 " style={{ color: mode === 'dark' ? 'white' : '', }}>
                     Admin
                   </Link> : ""}
@@ -183,7 +183,6 @@ function Navbar() {
                     Logout
                   </a> : ""}
                 </div>
-
                 <div className="hidden lg:ml-8 lg:flex">
                   <a href="#" className="flex items-center text-gray-700 ">
                     <img
