@@ -1,4 +1,4 @@
- name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages         # Target branch for deployment
-          folder: build            # Output folder (for React, it's "build")
+          branch: gh-pages
+          folder: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
